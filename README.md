@@ -54,7 +54,6 @@ The Curl above POSTs to the softhouse api: "Title", "Body", "userId".
   "__v": 0
 }
 
-
 ### Method: PUT
 ##### **Example with endpoint: /posts:**<br>
 curl -i -X PUT http://api.softhouse.rocks/posts/3 -H "Content-Type:application/json" -d  '{
@@ -69,7 +68,7 @@ Returns body with the old information, should look like this
 
 {"_id":"5e9ed8353c9c34a2d807f465","id":3,"__v":0,"body":"OldBody","title":"OldTitle","userId":13}
 
-
+### Method: PATCH
 ### Method: PATCH
 ##### **Example with endpoint: /posts:**<br>
 curl -i -X PATCH http://api.softhouse.rocks/posts/3 -H "Content-Type:application/json" -d  '{
@@ -85,16 +84,13 @@ Returns body with the updated information
 "body": "newBody", "title": "oldTitle", userId": "3"
 
 
-
 ### Method: DELETE
-
 ##### **Example with endpoint: /posts:**<br>
 curl -i -X DELETE http://api.softhouse.rocks/posts/1
 
 Deletes an object or endpoint at the specified path
 
 #### Result:
-
 Status: 
 200 OK - Path found, was deleted
 
