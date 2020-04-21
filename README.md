@@ -4,11 +4,14 @@ An API that implements jsonplaceholder post and users endpoints, backed by a mon
 
 The purpose for this API is educational and meant as a step between using jsonplaceholder in a UI and implementing your own API.
 
-# The HTTP Methods supported are:
-## GET, POST
+## The HTTP Methods supported are:
+- GET
+- POST
+- PUT
+- PATCH
 
 ## Supported but you need Auth:
-## DELETE
+- DELETE
 
 ### Method: GET
 ##### Example with endpoint: **/posts**:<br>
@@ -35,7 +38,7 @@ Gets the information in the specified URI and displays it in JSON format
 }
 
 ### Method: POST
-##### Example:
+##### Example with endpoint: **/posts**:<br>
 curl -i -X POST -H "Content-Type:application/json" http://api.softhouse.rocks/posts -d '{"title":"Hi, World", "body":"Fresh as morning dew", "userId": "1"}' 
 
 The Curl above POSTs to the softhouse api: "Title", "Body", "userId".
@@ -53,6 +56,7 @@ The Curl above POSTs to the softhouse api: "Title", "Body", "userId".
   "__v": 0
 }
 
+
 ### Method: PUT
 
 ##### Example:
@@ -68,6 +72,8 @@ Returns body with the old information, should look like this
 
 {"_id":"5e9ed8353c9c34a2d807f465","id":3,"__v":0,"body":"OldBody","title":"OldTitle","userId":13}
 
+
+
 ### Method: PATCH
 
 ##### Example:
@@ -80,3 +86,19 @@ curl -i -X PATCH http://api.softhouse.rocks/posts/3 -H "Content-Type:application
 Status: 200 OK
 
 Returns body with the updated information
+
+"body": "newBody", "title": "oldTitle", userId": "3"
+
+
+
+### Method: DELETE
+
+#### Example:
+curl -i -X DELETE http://api.softhouse.rocks/posts/1
+
+Deletes an object or endpoint at the specified path
+
+#### Result:
+
+Status: If path was found and was succesfully deleted, returns code 200 OK.
+If path not found and nothing was found, returns 204 No Content
