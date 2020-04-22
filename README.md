@@ -26,7 +26,7 @@ curl -X GET http://api.softhouse.rocks/posts/1 | jq .
 Gets the information in the specified URI and displays it in JSON format
 
 **The result will look like this:**<br>
-{
+{<br>
   "_id": "5e9ecdbd3c9c34a2d807ce9d",<br>
   "id": 1,<br>
   "__v": 0,<br>
@@ -45,7 +45,7 @@ The Curl above POSTs to the softhouse api: "Title", "Body", "userId".
 {"_id":"5e9eb17e09cee0002106f314","body":"Fresh as morning dew","title":"Hi, World","userId":1,"id":811,"__v":0}
 
 **With jq:**<br>
-{
+{<br>
   "_id": "5e9eadf3a8eb15002609e47b",<br>
   "body": "Fresh as morning dew",<br>
   "title": "Hi, World",<br>
