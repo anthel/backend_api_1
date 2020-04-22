@@ -27,12 +27,12 @@ Gets the information in the specified URI and displays it in JSON format
 
 **The result will look like this:**<br>
 {
-  "_id": "5e9ecdbd3c9c34a2d807ce9d",
-  "id": 1,
-  "__v": 0,
-  "body": "string",
-  "title": "string",
-  "userId": 1
+  "_id": "5e9ecdbd3c9c34a2d807ce9d",<br>
+  "id": 1,<br>
+  "__v": 0,<br>
+  "body": "string",<br>
+  "title": "string",<br>
+  "userId": 1<br>
 }
 
 ### Method: POST
@@ -53,7 +53,6 @@ The Curl above POSTs to the softhouse api: "Title", "Body", "userId".
   "id": 807,
   "__v": 0
 }
-
 
 ### Method: PUT
 #### **Example with endpoint: /posts:**<br>
@@ -85,7 +84,6 @@ Returns body with the updated information
 "body": "newBody", "title": "oldTitle", userId": "3"
 
 
-
 ### Method: DELETE
 
 #### **Example with endpoint: /posts:**<br>
@@ -94,6 +92,10 @@ curl -i -X DELETE http://api.softhouse.rocks/posts/1
 Deletes an object or endpoint at the specified path
 
 #### Result:
+Status: 
+200 OK - Path found, was deleted
+
+204 No Content - Path not found, nothing changed
 
 Status: 
 200 OK - Path found, was deleted
