@@ -41,17 +41,17 @@ curl -i -X POST -H "Content-Type:application/json" http://api.softhouse.rocks/po
 
 The Curl above POSTs to the softhouse api: "Title", "Body", "userId".
 
-**The result will look like this:**
+**The result will look like this:**<br>
 {"_id":"5e9eb17e09cee0002106f314","body":"Fresh as morning dew","title":"Hi, World","userId":1,"id":811,"__v":0}
 
-**With jq:**
+**With jq:**<br>
 {
-  "_id": "5e9eadf3a8eb15002609e47b",
-  "body": "Fresh as morning dew",
-  "title": "Hi, World",
-  "userId": 1,
-  "id": 807,
-  "__v": 0
+  "_id": "5e9eadf3a8eb15002609e47b",<br>
+  "body": "Fresh as morning dew",<br>
+  "title": "Hi, World",<br>
+  "userId": 1,<br>
+  "id": 807,<br>
+  "__v": 0<br>
 }
 
 ### Method: PUT
