@@ -96,9 +96,3 @@ Status:
 200 OK - Path found, was deleted
 
 204 No Content - Path not found, nothing changed
-
-Status: 
-200 OK - Path found, was deleted
-
-204 No Content - Path not found, nothing changed
-
