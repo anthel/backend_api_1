@@ -26,14 +26,14 @@ curl -X GET http://api.softhouse.rocks/posts/1 | jq .
 Gets the information in the specified URI and displays it in JSON format
 
 **The result will look like this:**<br>
-{<br>
-  "_id": "5e9ecdbd3c9c34a2d807ce9d",<br>
-  "id": 1,<br>
-  "__v": 0,<br>
-  "body": "string",<br>
-  "title": "string",<br>
-  "userId": 1<br>
-}
+  {<br>
+    "_id": "5e9ecdbd3c9c34a2d807ce9d",<br>
+    "id": 1,<br>
+    "__v": 0,<br>
+    "body": "string",<br>
+    "title": "string",<br>
+    "userId": 1<br>
+  }
 
 ### Method: POST
 #### Example with endpoint: **/posts**:<br>
