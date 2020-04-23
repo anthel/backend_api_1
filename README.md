@@ -18,7 +18,9 @@ curl -i -H "Content-Type:application/json" http://api.softhouse.rocks/posts/1
 Gets the information from the specified URI
 
 **The result will look like this:**<br>
+```
 {"_id":"5e806d9f42fbde006b6b9ecf","userId":1,"id":1,"title":"sunt aut facere repellat provident occaecati excepturi optio reprehenderit","body":"quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto","__v":0}
+```
 
 #### Example2:<br>
 curl -X GET http://api.softhouse.rocks/posts/1 | jq .
@@ -47,14 +49,16 @@ The Curl above POSTs to the softhouse api: "Title", "Body", "userId".
 {"_id":"5e9eb17e09cee0002106f314","body":"Fresh as morning dew","title":"Hi, World","userId":1,"id":811,"__v":0}
 
 **With jq:**<br>
-{<br>
-  "_id": "5e9eadf3a8eb15002609e47b",<br>
-  "body": "Fresh as morning dew",<br>
-  "title": "Hi, World",<br>
-  "userId": 1,<br>
-  "id": 807,<br>
-  "__v": 0<br>
+```json
+{
+  "_id": "5e9eadf3a8eb15002609e47b",
+  "body": "Fresh as morning dew",
+  "title": "Hi, World",
+  "userId": 1,
+  "id": 807,
+  "__v": 0
 }
+```
 
 ### Method: PUT
 #### **Example with endpoint: /posts:**<br>
@@ -107,29 +111,33 @@ curl -i -H "Content-Type:application/json" http://api.softhouse.rocks/users/1
 Gets the information from the specified URI.
 
 #### Result will look like this:<br>
+```
 {"address":{"geo":{"lat":-37.3159,"lng":81.1496},"street":"Kulas Light","suite":"Apt. 556","city":"Gwenborough","zipcode":"92998-3874"},"_id":"5e806d9f42fbde006b6b9ec5","id":1,"name":"Leanne Graham","username":"Bret","email":"Sincere@april.biz","__v":0}
+```
 
 #### Example 2 with jq:
 Delete -i and -H and replace it with -X and GET.<br>
 curl -X GET http://api.softhouse.rocks/users/1 | jq .<br>
-{<br>
-  "address": {<br>
-    "geo": {<br>
-      "lat": -37.3159,<br>
-      "lng": 81.1496<br>
-    },<br>
-    "street": "Kulas Light",<br>
-    "suite": "Apt. 556",<br>
-    "city": "Gwenborough",<br>
-    "zipcode": "92998-3874"<br>
-  },<br>
-  "_id": "5e806d9f42fbde006b6b9ec5",<br>
-  "id": 1,<br>
-  "name": "Leanne Graham",<br>
-  "username": "Bret",<br>
-  "email": "Sincere@april.biz",<br>
-  "__v": 0<br>
+```json
+{
+  "address": {
+    "geo": {
+      "lat": -37.3159,
+      "lng": 81.1496
+    },
+    "street": "Kulas Light",
+    "suite": "Apt. 556",
+    "city": "Gwenborough",
+    "zipcode": "92998-3874"
+  },
+  "_id": "5e806d9f42fbde006b6b9ec5",
+  "id": 1,
+  "name": "Leanne Graham",
+  "username": "Bret",
+  "email": "Sincere@april.biz",
+  "__v": 0
 }
+```
 
 Gets the information in the specified URI and displays it in JSON format.
 
