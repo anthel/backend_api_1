@@ -5,7 +5,7 @@ An API that implements jsonplaceholder post and users endpoints, backed by a mon
 The purpose for this API is educational and meant as a step between using jsonplaceholder in a UI and implementing your own API.
 
 # Posts
-## The HTTP Methods supported are:
+### The HTTP Methods supported are:
 - GET
 - POST
 - PUT
@@ -84,8 +84,9 @@ curl -i -X PUT http://api.softhouse.rocks/posts/3 -H "Content-Type:application/j
   Replaces the information on the specified path, with the provided data
 
 #### Result:
+```
 Status: 200 OK
-
+```
 Returns body with the old information, should look like this
 ```
 {"_id":"5e9ed8353c9c34a2d807f465","id":3,"__v":0,"body":"OldBody","title":"OldTitle","userId":13}
@@ -113,8 +114,9 @@ curl -i -X PATCH http://api.softhouse.rocks/posts/3 -H "Content-Type:application
   Updates a part of the object on the specified path, depending on the provided data
 
 #### Result:
+```
 Status: 200 OK
-
+```
 Returns body with the updated information
 
 ```
