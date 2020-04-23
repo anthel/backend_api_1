@@ -4,15 +4,22 @@ An API that implements jsonplaceholder post and users endpoints, backed by a mon
 
 The purpose for this API is educational and meant as a step between using jsonplaceholder in a UI and implementing your own API.
 
+## Posts
 ## The HTTP Methods supported are:
 - GET
 - POST
 - PUT
-- PATCH
+- PATCH 
 - DELETE
 
-### Method: GET
-#### **Example with endpoint: /posts:**<br>
+## Paths should look like this:
+
+  /posts - List of posts
+  /posts/{postId} - Gets a specific post with Id
+
+#### Method: GET
+
+#### Example 1:<br>
 curl -i -H "Content-Type:application/json" http://api.softhouse.rocks/posts/1
 
 Gets the information from the specified URI
@@ -22,8 +29,8 @@ Gets the information from the specified URI
 {"_id":"5e806d9f42fbde006b6b9ecf","userId":1,"id":1,"title":"sunt aut facere repellat provident occaecati excepturi optio reprehenderit","body":"quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto","__v":0}
 ```
 
-#### Example2:<br>
-curl -X GET http://api.softhouse.rocks/posts/1 | jq .
+#### Example 2 with jq and {postId}:<br>
+curl http://api.softhouse.rocks/posts/1 | jq .
 
 Gets the information in the specified URI and displays it in JSON format
 
@@ -39,11 +46,11 @@ Gets the information in the specified URI and displays it in JSON format
   }
 ```
 
-### Method: POST
-#### Example with endpoint: **/posts**:<br>
+#### Method: POST
+
 curl -i -X POST -H "Content-Type:application/json" http://api.softhouse.rocks/posts -d '{"title":"Hi, World", "body":"Fresh as morning dew", "userId": "1"}' 
 
-The Curl above POSTs to the softhouse api: "Title", "Body", "userId".
+Posts the information you give to the Object
 
 **The result will look like this:**<br>
 ```
@@ -63,7 +70,7 @@ The Curl above POSTs to the softhouse api: "Title", "Body", "userId".
 ```
 
 ### Method: PUT
-#### **Example with endpoint: /posts:**<br>
+#### Example 1<br>
 curl -i -X PUT http://api.softhouse.rocks/posts/3 -H "Content-Type:application/json" -d  '{
   "body": "NewBody", "title": "NewTitle", "userId": "1337"}'
 
@@ -105,7 +112,17 @@ Status:
 
 204 No Content - Path not found, nothing changed
 
-### Examples below have endpoint: /users
+## Users
+## The HTTP Methods supported are:
+- GET
+- POST
+- PUT - Must have specific user Id
+
+## Paths should look like this:
+  /users - List of users
+  /users/{userId} - Gets a specific user with users Id
+
+
 ### Method: GET 
 #### **Example 1**<br>
 curl -i -H "Content-Type:application/json" http://api.softhouse.rocks/users/1
@@ -118,7 +135,6 @@ Gets the information from the specified URI.
 ```
 
 #### Example 2 with jq:
-Delete -i and -H and replace it with -X and GET.<br>
 curl -X GET http://api.softhouse.rocks/users/1 | jq .<br>
 ```json
 {
@@ -140,6 +156,5 @@ curl -X GET http://api.softhouse.rocks/users/1 | jq .<br>
   "__v": 0
 }
 ```
-
 Gets the information in the specified URI and displays it in JSON format.
 
