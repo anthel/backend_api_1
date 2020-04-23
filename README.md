@@ -46,7 +46,9 @@ curl -i -X POST -H "Content-Type:application/json" http://api.softhouse.rocks/po
 The Curl above POSTs to the softhouse api: "Title", "Body", "userId".
 
 **The result will look like this:**<br>
+```
 {"_id":"5e9eb17e09cee0002106f314","body":"Fresh as morning dew","title":"Hi, World","userId":1,"id":811,"__v":0}
+```
 
 **With jq:**<br>
 ```json
