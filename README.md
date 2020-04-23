@@ -96,3 +96,38 @@ Status:
 200 OK - Path found, was deleted
 
 204 No Content - Path not found, nothing changed
+
+### Examples below have endpoint: /users
+### Method: GET 
+#### **Example 1**<br>
+curl -i -H "Content-Type:application/json" http://api.softhouse.rocks/users/1
+
+Gets the information from the specified URI.
+
+#### Result will look like this:<br>
+{"address":{"geo":{"lat":-37.3159,"lng":81.1496},"street":"Kulas Light","suite":"Apt. 556","city":"Gwenborough","zipcode":"92998-3874"},"_id":"5e806d9f42fbde006b6b9ec5","id":1,"name":"Leanne Graham","username":"Bret","email":"Sincere@april.biz","__v":0}
+
+#### Example 2 with jq:
+Delete -i and -H and replace it with -X and GET.
+curl -X GET http://api.softhouse.rocks/users/1 | jq .
+{<br>
+  "address": {<br>
+    "geo": {<br>
+      "lat": -37.3159,<br>
+      "lng": 81.1496<br>
+    },<br>
+    "street": "Kulas Light",<br>
+    "suite": "Apt. 556",<br>
+    "city": "Gwenborough",<br>
+    "zipcode": "92998-3874"<br>
+  },<br>
+  "_id": "5e806d9f42fbde006b6b9ec5",<br>
+  "id": 1,<br>
+  "name": "Leanne Graham",<br>
+  "username": "Bret",<br>
+  "email": "Sincere@april.biz",<br>
+  "__v": 0<br>
+}
+
+Gets the information in the specified URI and displays it in JSON format.
+
